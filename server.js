@@ -7,7 +7,8 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
-app.get("/science", async (req, res) => {
+// Route to get a science fact
+app.get("/facts", async (req, res) => {
   try {
     const response = await fetch("https://api.api-ninjas.com/v1/facts", {
       headers: { "X-Api-Key": process.env.API_KEY }
